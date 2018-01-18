@@ -1,62 +1,6 @@
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  * @flow
-//  */
-
-// import React, { Component } from 'react';
-// import {
-//   Platform,
-//   StyleSheet,
-//   Text,
-//   View
-// } from 'react-native';
-
-// const instructions = Platform.select({
-//   ios: '你好!My App\n' +
-//     'Cmd+D or shake for dev menu,',
-//   android: 'Double tap R on your keyboard to reload,\n' +
-//     'Shake or press menu button for dev menu',
-// });
-
-// export default class App extends Component<{}> {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         {/* <View style={{ height: '30%', width: '100%', background: 'silver' }}>top</View> */}
-//         <Text style={styles.welcome}>
-//           Welcome to React Native!
-//         </Text>
-//         <Text style={styles.instructions}>
-//           To get started, edit App.js
-//         </Text>
-//         <Text style={styles.instructions}>
-//           {instructions}
-//         </Text>
-//       </View>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   instructions: {
-//     textAlign: 'center',
-//     color: '#333333',
-//     marginBottom: 5,
-//   },
-// });
-
+/**
+ * 2018-1-18 LiGang
+ */
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, Image  } from 'react-native';
 
@@ -73,9 +17,9 @@ export default class HelloWorldApp extends Component {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <ScrollView>
       <View style={styles.wrap}>
         <Text style={styles.title}>发现</Text>
+        <ScrollView>
         <View style={styles.top}>
           <Text>Hello world!</Text>
           <Image source={pic} style={{width: 193, height: 110}} />
@@ -84,9 +28,10 @@ export default class HelloWorldApp extends Component {
           <Greeting name='Rexxar' />
           <Greeting name='Jaina' />
           <Greeting name='Valeera' />
+          <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={{width: 140, height:40}} />
         </View>
+        </ScrollView>
       </View>
-      </ScrollView>
     );
   }
 };
@@ -102,7 +47,14 @@ const styles = StyleSheet.create({
   position: 'absolute', 
   top: 50,
   borderColor: 'black',
-  // backgroundColor: 'silver',
+  zIndex: 1,
+  width: '100%',
+  height: 60,
+  padding: 10,
+  textAlign: 'center',
+  textAlignVertical: 'center',
+  backgroundColor: 'silver',
+  borderStyle: 'solid',
   // borderBottomWidth: 8,
   },
   top: {
