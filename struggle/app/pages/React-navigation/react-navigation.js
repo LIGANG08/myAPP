@@ -1,3 +1,7 @@
+/**
+ *  2018-1-20 Li Gang react-navigation
+ */
+
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation'; // 1.0.0-beta.14
