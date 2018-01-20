@@ -5,47 +5,41 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, ScrollView, Text, View, StyleSheet, Image } from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import { ScrollView, Text, View, StyleSheet, Image } from 'react-native';
 
 export default class Main extends Component<{}> {
   render() {
     const pic = {
       uri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=161888459,1712714238&fm=27&gp=0.jpg',
     };
+    // const display = this.state.showText ? this.props.text : ' ';
+
     return (
-      <View>
-        <View style={styles.wrap}>
-          <Text style={styles.title}>发现</Text>
-          <ScrollView>
-            <View style={styles.top}>
-              <Text>Hello world!</Text>
-              <Image source={pic} style={{ width: 193, height: 110 }} />
-            </View>
-            <View style={{ alignItems: 'center' }}>
-              {/* <Greeting name='Rexxar' />
-              <Greeting name='Jaina' />
-              <Greeting name='Valeera' /> */}
-              <Image source={{ uri: 'https://facebook.github.io/react/img/logo_og.png' }} style={{ width: 140, height: 40 }} />
-            </View>
-          </ScrollView>
+      <View style={styles.cont}>
+        <View style={styles.logo}>
+          <Text>发现</Text>
         </View>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
+        <ScrollView>
+          <View style={styles.top}>
+            <Image source={pic} style={{ width: 200, height: 150 }} />
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <Image source={{ uri: 'https://facebook.github.io/react/img/logo_og.png' }} style={{ width: 150, height: 40 }} />
+          </View>
+        </ScrollView>
+        <View style={styles.wrap}>
+          <View style={styles.title}>
+            <Text>极客新闻</Text>
+            <Text>查看 ></Text>
+          </View>
+          <View style={{
+            width: 300, height: 200, backgroundColor: 'red', padding: 10,
+            }}
+          >
+            <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
+            <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
+            <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
+          </View>
         </View>
       </View>
     );
@@ -53,53 +47,45 @@ export default class Main extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
-  wrap: {
+
+  cont: {
+    backgroundColor: 'white',
+  },
+
+  logo: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  title: {
-    position: 'absolute',
-    top: 50,
-    borderColor: 'black',
-    zIndex: 1,
+    marginTop: 30,
     width: '100%',
     height: 60,
-    padding: 10,
-    textAlign: 'center',
-    textAlignVertical: 'center',
     backgroundColor: 'silver',
-    borderStyle: 'solid',
-    // borderBottomWidth: 8,
   },
+
+  wrap: {
+    alignItems: 'center',
+  },
+
   top: {
     width: '100%',
-    height: 150,
     backgroundColor: 'silver',
-    marginTop: 120,
+    marginTop: 10,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  title: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: 'silver',
+    width: '100%',
+  },
+
   footer: {
     position: 'absolute',
     bottom: 10,
   },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
 });
