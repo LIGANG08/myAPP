@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet, Image } from 'react-native';
+import { ScrollView, Text, View, StyleSheet, Image, FlatList } from 'react-native';
 
 export default class Main extends Component<{}> {
   render() {
@@ -20,27 +20,55 @@ export default class Main extends Component<{}> {
           <Text>发现</Text>
         </View>
         <ScrollView>
-          <View style={styles.top}>
-            <Image source={pic} style={{ width: 200, height: 150 }} />
-          </View>
-          <View style={{ alignItems: 'center' }}>
-            <Image source={{ uri: 'https://facebook.github.io/react/img/logo_og.png' }} style={{ width: 150, height: 40 }} />
+          <View>
+            <View style={styles.top}>
+              <Image source={pic} style={{ width: 200, height: 150 }} />
+            </View>
+            <View style={styles.wrap}>
+              <View style={styles.title}>
+                <Text>极客新闻</Text>
+                <Text>查看 ></Text>
+              </View>
+              <View style={{
+                width: 300, height: 200, backgroundColor: 'red', padding: 10, marginTop: 10,
+                }}
+              >
+                <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
+                <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
+                <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
+              </View>
+            </View>
+            <View style={styles.wrap}>
+              <View style={styles.title}>
+                <Text>精品专栏</Text>
+                <Text>查看 ></Text>
+              </View>
+              <View style={{
+                width: 300, height: 200, backgroundColor: 'red', padding: 10, marginTop: 10,
+                }}
+              >
+                <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
+                <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
+                <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <FlatList
+                data={[
+                  { key: 'Devin' },
+                  { key: 'Jackson' },
+                  { key: 'James' },
+                  { key: 'Joel' },
+                  { key: 'John' },
+                  { key: 'Jillian' },
+                  { key: 'Jimmy' },
+                  { key: 'Julie' },
+                ]}
+                renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+              />
+            </View>
           </View>
         </ScrollView>
-        <View style={styles.wrap}>
-          <View style={styles.title}>
-            <Text>极客新闻</Text>
-            <Text>查看 ></Text>
-          </View>
-          <View style={{
-            width: 300, height: 200, backgroundColor: 'red', padding: 10,
-            }}
-          >
-            <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
-            <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
-            <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
-          </View>
-        </View>
       </View>
     );
   }
@@ -63,7 +91,9 @@ const styles = StyleSheet.create({
   },
 
   wrap: {
+    display: 'flex',
     alignItems: 'center',
+    marginTop: 10,
   },
 
   top: {
@@ -78,9 +108,22 @@ const styles = StyleSheet.create({
   title: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: 'silver',
     width: '100%',
+    // marginTop: 10,
+    padding: 10,
+  },
+
+  container: {
+    flex: 1,
+    paddingTop: 22,
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
   },
 
   footer: {
