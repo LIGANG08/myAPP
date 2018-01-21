@@ -1,11 +1,11 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native
+ * https://github.com/facebook/react-native  2018-1-21 Li gang Home
  * @flow
  */
 
 import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet, Image, FlatList, TabBarIOS } from 'react-native';
+import { ScrollView, Text, View, StyleSheet, Image, FlatList } from 'react-native';
 
 export default class Main extends Component<{}> {
   render() {
@@ -67,31 +67,6 @@ export default class Main extends Component<{}> {
             </View>
           </View>
         </ScrollView>
-        <View
-          style={{
-          width: '100%',
-          height: 50,
-          backgroundColor: 'black',
-          position: 'absolute',
-          bottom: 0,
-          }}
-        >
-          <TabBarIOS style={{ height: 49 }} tintColor="#FF6347" >
-            <TabBarIOS.Item
-              style={{ height: 49, width: 100 }}
-              systemIcon="bookmarks"
-              // icon={require('./发现.png')}
-            />
-            <TabBarIOS.Item
-              style={{ height: 49, width: 100 }}
-              systemIcon="contacts"
-            />
-            <TabBarIOS.Item
-              style={{ height: 49, width: 100 }}
-              systemIcon="history"
-            />
-          </TabBarIOS>
-        </View>
       </View>
     );
   }
@@ -104,8 +79,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // padding: 10,
-    // backgroundColor: 'red',
   },
 
   logo: {

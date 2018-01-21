@@ -1,36 +1,60 @@
-/*
- * MIT License
- *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+/**
+ *  2018-1-21 Li Gang react-navigation
  */
 
-/*
- * Revision History:
- *     Initial: 2018/01/16        Feng Yifei
- */
+import React from 'react';
+import { Button, Image } from 'react-native';
+import { TabNavigator } from 'react-navigation'; // 1.0.0-beta.14
 
-import Main from './pages/Main';
+import home from '../app/pages/Home';
+import person from '../app/pages/Person';
 
-const Navigations = {
-  Main: { screen: Main },
-};
+class MyHomeScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: 'Home',
+    tabBarIcon: () => {
+      return (
+        <Image
+          source={require('./images/find.png')}
+          style={{ tintColor: '#FF6347', width: 26, height: 26 }}
+        />
+      );
+    },
+  };
 
-export default Navigations;
+  render() {
+    return (
+      <Button
+        onPress={() => this.props.navigation.navigate('home')}
+        title="Go to notifications"
+      />
+    );
+  }
+}
+
+// const styles = StyleSheet.create({
+//   icon: {
+//     width: 26,
+//     height: 26,
+//   },
+// });
+
+const MyApp = TabNavigator({
+  Home: {
+    screen: MyHomeScreen,
+  },
+  home: {
+    screen: home,
+  },
+  person: {
+    screen: person,
+  },
+}, {
+  tabBarPosition: 'top',
+  animationEnabled: true,
+  tabBarOptions: {
+    activeTintColor: '#e91e63',
+  },
+});
+
+export default MyApp;
