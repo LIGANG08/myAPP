@@ -6,8 +6,19 @@
 
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, FlatList } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class Main extends Component {
+  static navigationOptions = {
+    tabBarLabel: 'Person',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Ionicons
+        name={focused ? 'ios-person' : 'ios-person-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+  };
   render() {
     return (
       <View style={styles.cont}>

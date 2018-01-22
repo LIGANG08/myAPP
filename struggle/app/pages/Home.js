@@ -6,8 +6,19 @@
 
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, Image, FlatList } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class Main extends Component {
+  static navigationOptions = {
+    tabBarLabel: '发现',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Ionicons
+        name={focused ? 'ios-timer' : 'ios-timer-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+  };
   render() {
     const pic = {
       uri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=161888459,1712714238&fm=27&gp=0.jpg',
