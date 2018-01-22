@@ -21,7 +21,7 @@ export default class Main extends Component {
   };
   render() {
     const pic = {
-      uri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=161888459,1712714238&fm=27&gp=0.jpg',
+      uri: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4290125007,381075359&fm=27&gp=0.jpg',
     };
     return (
       <View style={styles.cont}>
@@ -31,7 +31,7 @@ export default class Main extends Component {
         <ScrollView>
           <View>
             <View style={styles.top}>
-              <Image source={pic} style={{ width: 350, height: 150 }} />
+              <Image source={pic} style={{ width: '100%', height: 150 }} />
             </View>
             <View style={styles.wrap}>
               <View style={styles.title}>
@@ -39,7 +39,7 @@ export default class Main extends Component {
                 <Text>查看</Text>
               </View>
               <View style={{
-                width: 300, height: 200, backgroundColor: 'red', padding: 10, marginTop: 10,
+                width: 300, height: 200, backgroundColor: 'silver', padding: 10, marginTop: 10,
                 }}
               >
                 <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
@@ -53,7 +53,7 @@ export default class Main extends Component {
                 <Text>查看</Text>
               </View>
               <View style={{
-                width: 300, height: 200, backgroundColor: 'red', padding: 10, marginTop: 10,
+                width: '100%', height: 200, backgroundColor: 'silver', padding: 10, marginTop: 10,
                 }}
               >
                 <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
@@ -88,8 +88,9 @@ const styles = StyleSheet.create({
   cont: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
+    // width: 350,
   },
 
   logo: {
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
   wrap: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     marginTop: 10,
   },
 
@@ -123,25 +124,19 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    // alignItems: 'center',
     backgroundColor: 'silver',
     padding: 10,
-    width: 360,
+    width: 372,
   },
 
   container: {
     flex: 1,
-    paddingTop: 22,
+    // paddingTop: 22,
   },
   item: {
     padding: 10,
     fontSize: 18,
     height: 44,
   },
-
-  footer: {
-    position: 'absolute',
-    bottom: 10,
-  },
-
 });

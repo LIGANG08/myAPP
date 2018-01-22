@@ -10,12 +10,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class Main extends Component {
   static navigationOptions = {
-    tabBarLabel: 'Column',
-    tabBarIcon: ({ tintColor, focused }) => (
+    tabBarLabel: '专栏',
+    tabBarIcon: ({ focused }) => (
       <Ionicons
         name={focused ? 'ios-book' : 'ios-book-outline'}
         size={26}
-        style={{ color: tintColor }}
+        style={{ color: 'tomato' }}
       />
     ),
   };

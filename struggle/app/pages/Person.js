@@ -5,12 +5,12 @@
  */
 
 import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet, FlatList } from 'react-native';
+import { Text, View, StyleSheet, FlatList, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class Main extends Component {
   static navigationOptions = {
-    tabBarLabel: 'Person',
+    tabBarLabel: '我的',
     tabBarIcon: ({ tintColor, focused }) => (
       <Ionicons
         name={focused ? 'ios-person' : 'ios-person-outline'}
@@ -20,30 +20,31 @@ export default class Main extends Component {
     ),
   };
   render() {
+    const pic = {
+      uri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2817540664,1853282315&fm=27&gp=0.jpg',
+    };
     return (
       <View style={styles.cont}>
-        <View style={styles.logo}>
-          <Text>我的</Text>
+        <View style={{ marginTop: 10 }}>
+          <Image source={pic} style={{ width: 360, height: 150 }} />
         </View>
-        <ScrollView>
-          <View>
-            <View style={styles.container}>
-              <FlatList
-                data={[
-                  { key: 'Devin' },
-                  { key: 'Jackson' },
-                  { key: 'James' },
-                  { key: 'Joel' },
-                  { key: 'John' },
-                  { key: 'Jillian' },
-                  { key: 'Jimmy' },
-                  { key: 'Julie' },
-                ]}
-                renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
-              />
-            </View>
+        <View>
+          <View style={styles.container}>
+            <FlatList
+              data={[
+                { key: 'Devin' },
+                { key: 'Jackson' },
+                { key: 'James' },
+                { key: 'Joel' },
+                { key: 'John' },
+                { key: 'Jillian' },
+                { key: 'Jimmy' },
+                { key: 'Julie' },
+              ]}
+              renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+            />
           </View>
-        </ScrollView>
+        </View>
       </View>
     );
   }
@@ -54,23 +55,13 @@ const styles = StyleSheet.create({
   cont: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
-  },
-
-  logo: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: 60,
-    backgroundColor: 'silver',
-    padding: 0,
   },
 
   container: {
     flex: 1,
-    paddingTop: 22,
+    // paddingTop: 22,
   },
   item: {
     padding: 10,

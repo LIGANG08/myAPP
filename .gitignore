@@ -3,3 +3,16 @@
 struggle/ios/struggle/Info.plist
 struggle/ios/struggle/Info.plist
 *.plist
+templates/
+struggle/android/app/src/main/assets/fonts/Octicons.ttf
+struggle/android/app/src/main/assets/fonts/Zocial.ttf
+struggle/ios/struggle/Info.plist
+struggle/ios/struggle.xcodeproj/project.pbxproj
+*.plist
+struggle/android/app/src/main/assets/fonts/SimpleLineIcons.ttf
+struggle/ios/struggle.xcodeproj/project.pbxproj
+*.pbxproj
+struggle/ios/struggle/Info.plist
+struggle/ios/struggle.xcodeproj/project.pbxproj
+*.pbxproj
+*.pbxproj
