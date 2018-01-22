@@ -1,13 +1,13 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native  2018-1-21 Li gang Home
+ * https://github.com/facebook/react-native  2018-1-22 Li gang Home
  * @flow
  */
 
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, Image, FlatList } from 'react-native';
 
-export default class Main extends Component<{}> {
+export default class Main extends Component {
   render() {
     const pic = {
       uri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=161888459,1712714238&fm=27&gp=0.jpg',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30,
+    // marginTop: 30,
     width: '100%',
     height: 60,
     backgroundColor: 'silver',

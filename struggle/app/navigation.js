@@ -1,47 +1,40 @@
 /**
- *  2018-1-21 Li Gang react-navigation
+ *  2018-1-22 Li Gang react-navigation
  */
 
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
 import { TabNavigator } from 'react-navigation';
-// import Ionicons from 'react-native-vector-icons/Ionicons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from './pages/Home';
 import Column from './pages/Column';
 import Person from './pages/Person';
 
-const styles = StyleSheet.create({
-  icon: {
-    width: 30,
-    height: 30,
-  },
-});
 
 const RootTabs = TabNavigator({
   Home: {
     screen: Home,
-    navigationOptions: {
-      tabBarLabel: '发现',
-      tabBarIcon: () => (
-        <Image
-          source={require('./images/find.png')}
-          style={[styles.icon, { tintColor: '#FF6347'}]}
-        />
-      ),
-    },
+    // navigationOptions: {
+    // tabBarLabel: '发现',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Ionicons
+        name={focused ? 'ios-home' : 'ios-home-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+    // },
   },
   Column: {
     screen: Column,
-    navigationOptions: {
-      tabBarLabel: '专栏',
-      tabBarIcon: () => (
-        <Image
-          source={require('./images/column.png')}
-          style={[styles.icon, { tintColor: '#FF6347' }]}
-        />
-      ),
-    },
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Ionicons
+        name={focused ? 'ios-home' : 'ios-home-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+    // },
     tabBarOptions: {
       activeTintColor: '#e91e63',
       labelStyle: {
@@ -54,15 +47,13 @@ const RootTabs = TabNavigator({
   },
   Person: {
     screen: Person,
-    navigationOptions: {
-      tabBarLabel: '我的',
-      tabBarIcon: () => (
-        <Image
-          source={require('./images/person.png')}
-          style={[styles.icon, { tintColor: '#FF6347' }]}
-        />
-      ),
-    },
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Ionicons
+        name={focused ? 'ios-home' : 'ios-home-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
     tabBarOptions: {
       activeTintColor: '#e91e63',
       labelStyle: {
@@ -75,4 +66,11 @@ const RootTabs = TabNavigator({
   },
 });
 
-export default RootTabs;
+const Navigations = {
+  Main: {
+    screen: RootTabs,
+  },
+};
+
+
+export default Navigations;

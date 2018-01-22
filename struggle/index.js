@@ -1,6 +1,4 @@
 import { AppRegistry } from 'react-native';
-// import Napp from './app/pages/React-navigation/react-navigation';
-import Nav from './app/navigation';
+import application from './app/index';
 
-// AppRegistry.registerComponent('struggle', () => Napp);
-AppRegistry.registerComponent('struggle', () => Nav);
+AppRegistry.registerComponent('struggle', () => application);

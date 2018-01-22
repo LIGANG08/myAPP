@@ -1,13 +1,13 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native 2018-1-21 Li gang Person
+ * https://github.com/facebook/react-native 2018-1-22 Li gang Person
  * @flow
  */
 
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, FlatList } from 'react-native';
 
-export default class Main extends Component<{}> {
+export default class Main extends Component {
   render() {
     return (
       <View style={styles.cont}>
@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30,
     width: '100%',
     height: 60,
     backgroundColor: 'silver',
