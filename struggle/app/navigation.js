@@ -29,7 +29,7 @@ const RootTabs = TabNavigator({
       fontSize: 12,
     },
     style: {
-      // backgroundColor: 'wheat',
+      backgroundColor: 'white',
     },
   },
 });

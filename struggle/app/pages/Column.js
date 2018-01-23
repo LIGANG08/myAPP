@@ -7,6 +7,7 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, FlatList, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Icon } from 'react-native-elements';
 
 export default class Main extends Component {
   static navigationOptions = {
@@ -30,8 +31,23 @@ export default class Main extends Component {
         <View style={{ marginTop: 10 }}>
           <Image source={pic} style={{ width: 360, height: 150 }} />
         </View>
-        <ScrollView>
+        <ScrollView horizontal>
           <View>
+            <View style={styles.container}>
+              <FlatList
+                data={[
+                  { key: 'Devin' },
+                  { key: 'Jackson' },
+                  { key: 'James' },
+                  { key: 'Joel' },
+                  { key: 'John' },
+                  { key: 'Jillian' },
+                  { key: 'Jimmy' },
+                  { key: 'Julie' },
+                ]}
+                renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+              />
+            </View>
             <View style={styles.container}>
               <FlatList
                 data={[
@@ -70,6 +86,7 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     height: 44,
+    width: 200,
   },
 
 });
