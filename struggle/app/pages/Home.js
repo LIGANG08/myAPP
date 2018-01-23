@@ -1,6 +1,6 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native  2018-1-22 Li gang Home
+ * https://github.com/facebook/react-native  2018-1-23 Li gang Home
  * @flow
  */
 
@@ -8,9 +8,10 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, Image, FlatList } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default class Main extends Component {
+export default class Home extends Component {
   static navigationOptions = {
     tabBarLabel: '发现',
+    title: '发现',
     tabBarIcon: ({ tintColor, focused }) => (
       <Ionicons
         name={focused ? 'ios-timer' : 'ios-timer-outline'}
@@ -25,9 +26,6 @@ export default class Main extends Component {
     };
     return (
       <View style={styles.cont}>
-        <View style={styles.logo}>
-          <Text>发现</Text>
-        </View>
         <ScrollView>
           <View>
             <View style={styles.top}>
@@ -87,27 +85,13 @@ const styles = StyleSheet.create({
 
   cont: {
     display: 'flex',
-    flex: 1,
-    // justifyContent: 'center',
     alignItems: 'center',
-    // width: 350,
-  },
-
-  logo: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    // marginTop: 30,
-    width: '100%',
-    height: 60,
-    backgroundColor: 'silver',
-    padding: 0,
   },
 
   wrap: {
     display: 'flex',
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'center',
     marginTop: 10,
   },
 
@@ -124,7 +108,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // alignItems: 'center',
+    alignItems: 'center',
     backgroundColor: 'silver',
     padding: 10,
     width: 372,
@@ -132,11 +116,14 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    // paddingTop: 22,
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: 22,
   },
   item: {
     padding: 10,
     fontSize: 18,
     height: 44,
   },
+
 });
