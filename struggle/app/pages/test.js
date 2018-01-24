@@ -14,9 +14,6 @@ const data = [
 
 export default class HomeComponent extends Component {
   render() {
-    // const pic = {
-    //   uri: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4290125007,381075359&fm=27&gp=0.jpg',
-    // };
     return (
       <View style={styles.container}>
         <Swiper
@@ -56,6 +53,6 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
     fontSize: 30,
-    // fontWeight: 'bold',
+    fontWeight: 'bold',
   },
 });

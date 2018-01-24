@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import Styles from './Styles/Styles';
 
 export default class Video extends Component {
   render() {
@@ -45,7 +46,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'silver',
     padding: 10,
-    width: 372,
+    width: Styles.ScreenWidth,
+    height: Styles.ScreenHigth,
   },
 
   titles: {

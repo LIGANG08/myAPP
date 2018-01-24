@@ -8,6 +8,8 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import Styles from './Styles/Styles';
+
 export default class News extends Component {
   render() {
     return (
@@ -47,7 +49,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'silver',
     padding: 10,
-    width: 372,
+    width: Styles.ScreenWidth,
+    height: Styles.ScreenHigth,
   },
 
   titles: {

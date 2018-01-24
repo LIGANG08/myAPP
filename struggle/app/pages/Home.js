@@ -15,6 +15,7 @@ import Course from '../components/Home/Course';
 import Shopping from '../components/Home/Shopping';
 import Hot from '../components/Home/Hot';
 import Tree from '../components/Home/Tree';
+import Styles from '../res/Styles';
 
 export default class Home extends Component {
   static navigationOptions = {
@@ -58,6 +59,8 @@ const styles = StyleSheet.create({
   cont: {
     display: 'flex',
     alignItems: 'center',
+    width: Styles.ScreenWidth,
+    height: Styles.ScreenHight,
   },
 
   wrap: {
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
   },
 
   top: {
-    width: '100%',
+    width: Styles.ScreenWidth,
     backgroundColor: 'silver',
     marginTop: 10,
     display: 'flex',
@@ -76,34 +79,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  title: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: 'silver',
-    padding: 10,
-    width: 372,
-  },
-
-  titles: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: 70,
-  },
-
   container: {
     flex: 1,
     display: 'flex',
     alignItems: 'center',
     paddingTop: 22,
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
   },
 
 });
