@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Swiper from 'react-native-swiper';
 
+const data = [
+  {
+    key: 'a',
+    name: 'name',
+  }, {
+    key: 'b',
+    name: 'name',
+  },
+];
+
 export default class HomeComponent extends Component {
   render() {
     // const pic = {
@@ -21,6 +31,13 @@ export default class HomeComponent extends Component {
           <Text style={styles.text}>Beautiful</Text>
           <Text style={styles.text}>And simple</Text>
         </Swiper>
+        <View>
+          {
+            data.map(item => (
+              <View key={item.key}><Text>{item.key}</Text></View>
+            ))
+          }
+        </View>
       </View>
     );
   }

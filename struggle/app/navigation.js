@@ -1,5 +1,5 @@
 /**
- *  2018-1-23 Li Gang react-navigation
+ *  2018-1-24 Li Gang react-navigation
  */
 
 import { TabNavigator } from 'react-navigation';
@@ -7,7 +7,7 @@ import { TabNavigator } from 'react-navigation';
 import Home from './pages/Home';
 import Column from './pages/Column';
 import Person from './pages/Person';
-import Test from './pages/test';
+// import Test from './pages/test';
 
 const RootTabs = TabNavigator({
   Home: {
@@ -19,9 +19,9 @@ const RootTabs = TabNavigator({
   Person: {
     screen: Person,
   },
-  test: {
-    screen: Test,
-  },
+  // test: {
+  //   screen: Test,
+  // },
 }, {
   tabBarOptions: {
     activeTintColor: 'tomato',

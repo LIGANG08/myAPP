@@ -1,13 +1,25 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native 2018-1-23 Li gang Home
+ * https://github.com/facebook/react-native 2018-1-24 Li gang Home
  * @flow
  */
 
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, FlatList, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { Icon } from 'react-native-elements';
+
+const data = [
+  {
+    key: 1,
+    title: 'title',
+  }, {
+    key: 2,
+    title: 'a',
+  }, {
+    key: 3,
+    title: 'name',
+  },
+];
 
 export default class Main extends Component {
   static navigationOptions = {
@@ -31,7 +43,7 @@ export default class Main extends Component {
         <View style={{ marginTop: 10 }}>
           <Image source={pic} style={{ width: 360, height: 150 }} />
         </View>
-        <ScrollView horizontal>
+        <ScrollView>
           <View>
             <View style={styles.container}>
               <FlatList
@@ -48,20 +60,26 @@ export default class Main extends Component {
                 renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
               />
             </View>
-            <View style={styles.container}>
-              <FlatList
-                data={[
-                  { key: 'Devin' },
-                  { key: 'Jackson' },
-                  { key: 'James' },
-                  { key: 'Joel' },
-                  { key: 'John' },
-                  { key: 'Jillian' },
-                  { key: 'Jimmy' },
-                  { key: 'Julie' },
-                ]}
-                renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
-              />
+            <View style={{ display: 'flex' }}>
+              {
+                data.map(item => (
+                  <View
+                    key={item.key}
+                    style={{
+                    width: 300,
+                    height: 200,
+                    backgroundColor: 'silver',
+                    padding: 10,
+                    margin: 10,
+                    marginTop: 10,
+                    }}
+                  >
+                    <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>{item.title}</Text></View>
+                    <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>{item.title}</Text></View>
+                    <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>{item.title}</Text></View>
+                  </View>
+                ))
+              }
             </View>
           </View>
         </ScrollView>

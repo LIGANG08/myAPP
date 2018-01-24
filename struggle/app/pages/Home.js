@@ -1,12 +1,20 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native  2018-1-23 Li gang Home
+ * https://github.com/facebook/react-native  2018-1-24 Li gang Home
  * @flow
  */
 
 import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet, Image, FlatList } from 'react-native';
+import { ScrollView, View, StyleSheet, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
+import News from '../components/Home/News';
+import Video from '../components/Home/Video';
+import Product from '../components/Home/Product';
+import Course from '../components/Home/Course';
+import Shopping from '../components/Home/Shopping';
+import Hot from '../components/Home/Hot';
+import Tree from '../components/Home/Tree';
 
 export default class Home extends Component {
   static navigationOptions = {
@@ -31,49 +39,13 @@ export default class Home extends Component {
             <View style={styles.top}>
               <Image source={pic} style={{ width: '100%', height: 150 }} />
             </View>
-            <View style={styles.wrap}>
-              <View style={styles.title}>
-                <Text>极客新闻</Text>
-                <Text>查看</Text>
-              </View>
-              <View style={{
-                width: 300, height: 200, backgroundColor: 'silver', padding: 10, marginTop: 10,
-                }}
-              >
-                <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
-                <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
-                <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
-              </View>
-            </View>
-            <View style={styles.wrap}>
-              <View style={styles.title}>
-                <Text>精品专栏</Text>
-                <Text>查看</Text>
-              </View>
-              <View style={{
-                width: '100%', height: 200, backgroundColor: 'silver', padding: 10, marginTop: 10,
-                }}
-              >
-                <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
-                <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
-                <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
-              </View>
-            </View>
-            <View style={styles.container}>
-              <FlatList
-                data={[
-                  { key: 'Devin' },
-                  { key: 'Jackson' },
-                  { key: 'James' },
-                  { key: 'Joel' },
-                  { key: 'John' },
-                  { key: 'Jillian' },
-                  { key: 'Jimmy' },
-                  { key: 'Julie' },
-                ]}
-                renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
-              />
-            </View>
+            <News />
+            <Video />
+            <Product />
+            <Course />
+            <Shopping />
+            <Hot />
+            <Tree />
           </View>
         </ScrollView>
       </View>
@@ -112,6 +84,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'silver',
     padding: 10,
     width: 372,
+  },
+
+  titles: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: 70,
   },
 
   container: {

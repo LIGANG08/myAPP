@@ -1,6 +1,6 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native 2018-1-23 Li gang Person
+ * https://github.com/facebook/react-native 2018-1-24 Li gang Person
  * @flow
  */
 
