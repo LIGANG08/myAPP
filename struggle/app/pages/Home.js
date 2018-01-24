@@ -15,6 +15,7 @@ import Course from '../components/Home/Course';
 import Shopping from '../components/Home/Shopping';
 import Hot from '../components/Home/Hot';
 import Tree from '../components/Home/Tree';
+import Carousel from '../components/Home/Carousel';
 import Styles from '../res/Styles';
 
 export default class Home extends Component {
@@ -30,15 +31,16 @@ export default class Home extends Component {
     ),
   };
   render() {
-    const pic = {
-      uri: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4290125007,381075359&fm=27&gp=0.jpg',
-    };
+    // const pic = {
+    //   uri: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4290125007,381075359&fm=27&gp=0.jpg',
+    // };
     return (
       <View style={styles.cont}>
         <ScrollView>
           <View>
             <View style={styles.top}>
-              <Image source={pic} style={{ width: '100%', height: 150 }} />
+              {/* <Image source={pic} style={{ width: '100%', height: 150 }} /> */}
+              <Carousel />
             </View>
             <News />
             <Video />
