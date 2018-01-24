@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import Styles from './Styles/Styles';
 
 export default class Video extends Component {
@@ -17,12 +17,38 @@ export default class Video extends Component {
             <Text>视频课程</Text>
           </View>
           <View style={{
-            width: 300, height: 200, backgroundColor: 'silver', padding: 10, marginTop: 10,
+            width: Styles.ScreenWidth,
+            padding: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
             }}
           >
-            <View style={{ flex: 1, backgroundColor: 'black', height: 30 }}><Text>s</Text></View>
-            <View style={{ flex: 1, backgroundColor: 'skyblue', height: 30 }}><Text>a</Text></View>
-            <View style={{ flex: 1, backgroundColor: 'steelblue', height: 30 }}><Text>b</Text></View>
+            <Image
+              source={{ uri: 'https://wx2.sinaimg.cn/thumb300/006SQnpEly1fnkuk362x5j30yi1pdtuf.jpg' }}
+              style={{
+                width: 90, height: 110, borderRadius: 6,
+              }}
+            />
+            <View style={{
+                  flex: 1,
+                  marginLeft: 10,
+                 }}
+            >
+              <Text>微服务架构核心20讲</Text>
+              <Text style={{ fontSize: 15, color: 'gray', marginTop: 10 }}>从理论到实战，理解微服务关键问题</Text>
+              <Text style={{ fontSize: 12, color: 'gray', marginTop: 10 }}>杨波|拍拍贷基础框架研发部总监，资深架构师，微服务技术专家</Text>
+              <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    width: 200,
+                    marginTop: 30,
+                   }}
+              >
+                <Text>20课时-约8分钟/课时</Text>
+                <Text style={{ color: 'tomato' }}>¥ 39</Text>
+              </View>
+            </View>
           </View>
         </View>
       </View>
@@ -37,6 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
+    backgroundColor: 'white',
   },
 
   title: {
@@ -44,10 +71,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'silver',
+    // backgroundColor: 'silver',
     padding: 10,
     width: Styles.ScreenWidth,
     height: Styles.ScreenHigth,
+    borderBottomColor: 'silver',
+    borderBottomWidth: 1,
   },
 
   titles: {

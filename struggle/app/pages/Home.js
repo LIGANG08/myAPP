@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: Styles.ScreenWidth,
     height: Styles.ScreenHight,
+    backgroundColor: '#F0F0F0',
   },
 
   wrap: {

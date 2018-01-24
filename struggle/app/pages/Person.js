@@ -21,7 +21,7 @@ export default class Main extends Component {
   };
   render() {
     const pic = {
-      uri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2817540664,1853282315&fm=27&gp=0.jpg',
+      uri: 'https://wx4.sinaimg.cn/crop.0.0.640.359.1000/006SQnpEly1flt5tofiixj30hs0budgw.jpg',
       // src: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=214580340,2910639274&fm=27&gp=0.jpg',
     };
     return (
