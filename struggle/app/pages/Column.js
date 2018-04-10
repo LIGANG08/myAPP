@@ -63,11 +63,11 @@ export default class Main extends Component {
       uri: 'https://static001.geekbang.org/resource/image/23/3f/23dadce371938f053d4c4494a300a33f.jpg',
     };
     return (
-      <View style={styles.cont}>
-        <View style={{ marginTop: 10 }}>
-          <Image source={pic} style={{ width: 360, height: 150 }} />
-        </View>
-        <ScrollView>
+      <ScrollView>
+        <View style={styles.cont}>
+          <View style={{ marginTop: 10 }}>
+            <Image source={pic} style={{ width: 360, height: 150 }} />
+          </View>
           <View>
             <View style={{
               width: Styles.ScreenWidth, padding: 10,
@@ -103,8 +103,8 @@ export default class Main extends Component {
                 }
             </View>
           </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     );
   }
 }

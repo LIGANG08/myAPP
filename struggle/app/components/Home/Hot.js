@@ -47,7 +47,7 @@ export default class Product extends Component {
                   <View
                     key={item.key}
                     style={{
-                    width: 300,
+                    width: 160,
                     marginLeft: 10,
                     marginTop: 10,
                     borderRadius: 6,
@@ -56,7 +56,7 @@ export default class Product extends Component {
                     }}
                   >
                     <View style={{ flex: 1 }}>
-                      <Image source={{ uri: item.uri }} style={{ width: '100%', height: 120, borderRadius: 6 }} />
+                      <Image source={{ uri: item.uri }} style={{ width: '100%', height: 80, borderRadius: 6 }} />
                     </View>
                   </View>
                 ))

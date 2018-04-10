@@ -6,36 +6,26 @@
 
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Styles from './Styles/Styles';
 
 const data = [
   {
     key: 1,
-    title: '赵成的运维体系管理',
-    uri: 'https://wx3.sinaimg.cn/crop.0.0.1242.698.1000/006SQnpEly1fmjtm5idmmj30yi0kcwv5.jpg',
-    auto: '赵成',
-  }, {
-    key: 2,
     title: '走向大前端',
     uri: 'https://wx2.sinaimg.cn/mw690/006SQnpEly1flwdx494pyj30yi0lytal.jpg',
   }, {
-    key: 3,
+    key: 2,
     title: '技术管理',
     uri: 'https://wx1.sinaimg.cn/mw690/006SQnpEly1flg7zjcqmaj30yi0kcqay.jpg',
     auto: '朱赟',
   },
   {
-    key: 4,
+    key: 3,
     title: '中高级工程师的必备技能',
     uri: 'https://static001.geekbang.org/static/www/img/course_qianduan.96ed848.jpg',
     auto: '杨文坚',
-  },
-  {
-    key: 5,
-    title: 'TensorFlow实战——基础班',
-    uri: 'https://static001.geekbang.org/static/www/img/course_tensorflow.dd05c11.jpg',
-    auto: '郑泽宇',
   },
 ];
 
@@ -46,6 +36,7 @@ export default class Video extends Component {
         <View style={styles.wrap}>
           <View style={styles.title}>
             <Text>精品微课</Text>
+            <View style={styles.titles}><Text style={{ fontSize: 12, color: 'gray' }}>查看全部</Text><Ionicons name="ios-arrow-forward" size={14} /></View>
           </View>
           <View style={{
             width: Styles.ScreenWidth, padding: 10,

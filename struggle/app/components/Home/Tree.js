@@ -56,7 +56,7 @@ export default class Product extends Component {
                   <View
                     key={item.key}
                     style={{
-                    width: 300,
+                    width: 160,
                     marginLeft: 10,
                     marginTop: 10,
                     borderRadius: 6,
@@ -64,8 +64,18 @@ export default class Product extends Component {
                     borderWidth: 1,
                     }}
                   >
-                    <View style={{ flex: 1 }}>
-                      <Image source={{ uri: item.uri }} style={{ width: '100%', height: 120, borderRadius: 6 }} />
+                    <View style={{
+                      flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                    }}
+                    >
+                      <Image source={{ uri: item.uri }} style={{ width: '100%', height: 120 }} />
+                      <View
+                        style={{
+                        width: 30, height: 30, zIndex: 1, backgroundColor: 'black', borderRadius: 20, opacity: 0.8, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
+                      }}
+                      >
+                        <Image source={{ uri: item.uri }} style={{ width: 10, height: 10, borderRadius: 5 }} />
+                      </View>
                     </View>
                     <View style={{ flex: 1, height: 30 }}>
                       <Text style={styles.text}>{item.title}</Text>
@@ -118,7 +128,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 10,
+    margin: 5,
   },
 
 });

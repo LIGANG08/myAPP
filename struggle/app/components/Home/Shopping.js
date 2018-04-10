@@ -52,13 +52,12 @@ export default class Video extends Component {
                     padding: 10,
                     marginTop: 10,
                     marginLeft: 5,
-                    borderRadius: 6,
                     borderColor: '#E8E8E8',
-                    borderWidth: 1,
+                    borderWidth: 0.5,
                     }}
                   >
                     <View style={{ flex: 1 }}>
-                      <Image source={{ uri: item.uri }} style={{ width: 90, height: 90, borderRadius: 6 }} />
+                      <Image source={{ uri: item.uri }} style={{ width: 90, height: 90 }} />
                     </View>
                     <View style={{ flex: 1, height: 30, marginTop: 60 }}>
                       <Text style={styles.text}>{item.title}</Text>

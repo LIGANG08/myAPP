@@ -64,6 +64,11 @@ export default class Product extends Component {
                     borderWidth: 1,
                     }}
                   >
+                    {/* <View>
+                      <svg>
+                        <polygon points="0,0 30,30 0,30 30,0" style={{ fill: '#cccccc', stroke: '#000000', strokeWidth: 1 }} />
+                      </svg>
+                    </View> */}
                     <View style={{ flex: 1 }}>
                       <Image source={{ uri: item.uri }} style={{ width: '100%', height: 120, borderRadius: 6 }} />
                     </View>

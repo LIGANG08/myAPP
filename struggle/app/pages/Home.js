@@ -5,9 +5,10 @@
  */
 
 import React, { Component } from 'react';
-import { ScrollView, View, StyleSheet, Image } from 'react-native';
+import { ScrollView, View, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import Live from '../components/Home/Live';
 import News from '../components/Home/News';
 import Video from '../components/Home/Video';
 import Product from '../components/Home/Product';
@@ -31,17 +32,14 @@ export default class Home extends Component {
     ),
   };
   render() {
-    // const pic = {
-    //   uri: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4290125007,381075359&fm=27&gp=0.jpg',
-    // };
     return (
       <View style={styles.cont}>
         <ScrollView>
           <View>
             <View style={styles.top}>
-              {/* <Image source={pic} style={{ width: '100%', height: 150 }} /> */}
               <Carousel />
             </View>
+            <Live />
             <News />
             <Video />
             <Product />

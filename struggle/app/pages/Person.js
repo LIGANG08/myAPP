@@ -21,31 +21,54 @@ export default class Main extends Component {
   };
   render() {
     const pic = {
-      uri: 'https://wx4.sinaimg.cn/crop.0.0.640.359.1000/006SQnpEly1flt5tofiixj30hs0budgw.jpg',
-      // src: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=214580340,2910639274&fm=27&gp=0.jpg',
+      uri: 'https://static.geekbang.org/infoq/5a32482bbcd77.png?imageView2/0/',
+    };
+    const src = {
+      uri: 'https://bpic.588ku.com/element_pic/01/48/79/9657443f7e6ca53.jpg!/fw/208/quality/90/unsharp/true/compress/true',
     };
     return (
       <View style={styles.cont}>
         <View style={{ marginTop: 10 }}>
           <Image source={pic} style={{ width: 360, height: 150 }} />
+          <View style={{
+            width: 180, marginTop: -35, display: 'flex', flexDirection: 'row', alignItems: 'center',
+            }}
+          >
+            <Image
+              source={src}
+              style={{
+                width: 70,
+                height: 70,
+                borderRadius: 35,
+                borderColor: 'silver',
+                borderWidth: 1,
+                marginLeft: 20,
+              }}
+            />
+            <Text style={{
+              marginTop: -35, marginLeft: 20, color: 'silver', fontSize: 18,
+              }}
+            >未登录
+            </Text>
+          </View>
         </View>
         <View>
           <View style={styles.container}>
             <View style={style}>
               <View style={ion}><Ionicons name="ios-checkbox" size={20} style={{ color: 'orange' }} /><Text>已购</Text></View>
-              <View><Ionicons name="ios-arrow-forward" size={25} /></View>
+              <View><Ionicons name="ios-arrow-forward" size={25} style={{ color: 'silver' }} /></View>
             </View>
             <View style={style}>
               <View style={ions}><Ionicons name="ios-chatbubbles" size={20} style={{ color: '#6699FF' }} /><Text>我的留言</Text></View>
-              <View><Ionicons name="ios-arrow-forward" size={25} /></View>
+              <View><Ionicons name="ios-arrow-forward" size={25} style={{ color: 'silver' }} /></View>
             </View>
             <View style={stylel}>
               <View style={ions}><Ionicons name="ios-heart" size={20} style={{ color: '#FF6633' }} /><Text>我的收藏</Text></View>
-              <View><Ionicons name="ios-arrow-forward" size={25} /></View>
+              <View><Ionicons name="ios-arrow-forward" size={25} style={{ color: 'silver' }} /></View>
             </View>
             <View style={style}>
               <View style={ion}><Ionicons name="ios-settings" size={20} style={{ color: '#6699FF' }} /><Text>设置</Text></View>
-              <View><Ionicons name="ios-arrow-forward" size={25} /></View>
+              <View><Ionicons name="ios-arrow-forward" size={25} style={{ color: 'silver' }} /></View>
             </View>
           </View>
         </View>
