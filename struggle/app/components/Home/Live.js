@@ -5,17 +5,21 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Styles from './Styles/Styles';
+// import Navigator, { dispatcher } from '../../helper/navigator';
 
 export default class Video extends Component {
   render() {
+    // const dispatch = dispatcher(this.props);
     return (
       <View>
         <View style={styles.wrap}>
           <View style={styles.title}>
-            <Text>极客Live</Text>
+            {/* <TouchableOpacity>
+              <Text onPress={() => dispatch(Navigator.navigate('Ligang'))}>极客Live</Text>
+            </TouchableOpacity> */}
             <View style={styles.titles}><Text style={{ fontSize: 12, color: 'orange' }}>直播预告</Text><Ionicons name="ios-arrow-forward" size={14} style={{ color: 'orange' }} /></View>
           </View>
           <View style={{

@@ -7,6 +7,7 @@ import { TabNavigator } from 'react-navigation';
 import Home from './pages/Home';
 import Column from './pages/Column';
 import Person from './pages/Person';
+import Ligang from './pages/Ligang';
 // import Test from './pages/test';
 
 const RootTabs = TabNavigator({
@@ -19,9 +20,6 @@ const RootTabs = TabNavigator({
   Person: {
     screen: Person,
   },
-  // test: {
-  //   screen: Test,
-  // },
 }, {
   tabBarOptions: {
     activeTintColor: 'tomato',
@@ -37,6 +35,9 @@ const RootTabs = TabNavigator({
 const Navigations = {
   Main: {
     screen: RootTabs,
+  },
+  Ligang: {
+    screen: Ligang,
   },
 };
 

@@ -19,9 +19,9 @@ export default class HomeComponent extends Component {
         <Swiper
           style={{ height: 300, backgroundColor: 'red', marginTop: 300 }}
           height={200}
-          horizontal={true}
-          autoplay={true}
-          showsButtons={true}
+          // horizontal={true}
+          // autoplay={true}
+          // showsButtons={true}
           paginationStyle={{ bottom: 10 }}
         >
           <Text style={styles.text}>Hello Swiper</Text>
@@ -56,3 +56,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
