@@ -1,6 +1,6 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native  2018-1-24 Li gang Hot
+ * https://github.com/facebook/react-native  2018-4-11 Li gang Hot
  * @flow
  */
 
@@ -38,7 +38,7 @@ export default class Product extends Component {
         <View style={styles.wrap}>
           <View style={styles.title}>
             <Text>热点专题</Text>
-            <View style={styles.titles}><Text style={{ fontSize: 12, color: 'gray' }}>查看全部</Text><Ionicons name="ios-arrow-forward" size={14} /></View>
+            <View style={styles.titles}><Text style={{ fontSize: 12, color: 'gray' }}>查看全部</Text><Ionicons name="ios-arrow-forward" size={14} style={{ color: 'gray' }} /></View>
           </View>
           <ScrollView horizontal>
             <View style={{ display: 'flex', flexDirection: 'row', paddingBottom: 10 }}>
